@@ -1,4 +1,4 @@
-# GameOfLife
+# GameOfLifeThread
 Linguagem: C#(WPF).
 Plataforma: Blend Visual Studio 2015.
 
