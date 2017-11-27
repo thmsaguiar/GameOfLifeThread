@@ -1,5 +1,8 @@
 # GameOfLife
-Linguagem: C#
+Linguagem: C#(WPF)
+Plataforma: Blend Visual Studio 2015
+Observação: O arquivo que contém a geração inicial tem que ser em .txt e deve estar na pasta /bin/Debug do projeto.
+
 Game of Life Conway with Threads - Jogo da Vida Conway com Threads.
 
 O jogo da vida é um autómato celular desenvolvido pelo matemático britânico John Horton Conway em 1970.[1] É o exemplo mais bem conhecido de autômato celular.
