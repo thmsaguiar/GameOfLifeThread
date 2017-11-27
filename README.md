@@ -1,6 +1,6 @@
 # GameOfLife
-Linguagem: C#(WPF)
-Plataforma: Blend Visual Studio 2015
+Linguagem: C#(WPF).
+Plataforma: Blend Visual Studio 2015.
 Observação: O arquivo que contém a geração inicial tem que ser em .txt e deve estar na pasta /bin/Debug do projeto.
 
 Game of Life Conway with Threads - Jogo da Vida Conway com Threads.
