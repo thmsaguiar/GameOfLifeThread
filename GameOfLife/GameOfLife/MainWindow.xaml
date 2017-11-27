@@ -1,0 +1,57 @@
+﻿<Window x:Class="GameOfLife.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLife"
+        mc:Ignorable="d"
+        Title="Game Of Life" Height="350" Width="525" Foreground="{x:Null}" Icon="Mushroom-1UP-icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="RawOrneryFanworms.gif"/>
+    </Window.Background>
+
+    <!--Page Inicial-->
+    <Canvas x:Name="inicial" Margin="0,0,2,0.667">
+        <!--Campos-->
+        <TextBox x:Name="caixaDir" TextWrapping="Wrap" Height="23" Width="175.333" Canvas.Left="169.502" Canvas.Top="93.189"/>
+        <TextBox x:Name="caixaQtd" TextWrapping="Wrap" Height="23" Width="87.374" Canvas.Left="208.599" Canvas.Top="148.793"/>
+        <TextBox x:Name="caixaThre" TextWrapping="Wrap" Height="23" Width="44.500" Canvas.Left="232.50" Canvas.Top="228.420"/>
+
+        <TextBlock x:Name="textFile" TextWrapping="Wrap" Foreground="#FFFDFDFD" FontFamily="Stencil" FontSize="18" Background="Black" Height="22.334" Canvas.Left="151.327" Canvas.Top="66.522" Width="212.648" Text=" Insira o nome do file:"/>
+        <TextBlock x:Name="textGeracao" TextWrapping="Wrap" Foreground="#FFFDFDFD" FontFamily="Stencil" FontSize="18" Background="Black" Height="22.334" Canvas.Left="133.537" Canvas.Top="123.46" Width="243.116" Text=" Quantidade de gerações:"/>
+        <TextBlock x:Name="textThread" TextWrapping="Wrap" Foreground="#FFFDFDFD" FontFamily="Stencil" FontSize="18" Background="Black" Height="22.334" Canvas.Left="149.326" Canvas.Top="179.086" Width="224.449" Text=" Quantidade de thread:"/>
+        <TextBlock x:Name="textThreadEx" TextWrapping="Wrap" Foreground="#FFFDFDFD" FontFamily="Stencil" FontSize="18" Background="Black" Height="22.334" Canvas.Left="208.599" Canvas.Top="199.213" Width="94.041" Text=" (0, 2 ou 4)"/>
+
+        <!--Botão-->
+        <UserControl x:Name="button" Height="56" Canvas.Left="322.986" Canvas.Top="228.42" Width="62.014" >
+            <UserControl.Background>
+                <ImageBrush ImageSource="play.png"/>
+            </UserControl.Background>
+            <Label x:Name="start" Content="" MouseDoubleClick="OpenFile" Margin="10,4.949,10,0" RenderTransformOrigin="0.524,0.475" Height="46" VerticalAlignment="Top"/>
+        </UserControl>
+
+        <!--Page Resultado-->
+        <Canvas x:Name="resultado" Height="319.333" Width="515">
+            <!--Itens-->
+            <TextBlock x:Name="titulo_pag_result" TextWrapping="Wrap" Background="#FF040404" FontFamily="Stencil" Width="100" Canvas.Left="210" TextAlignment="Center" Foreground="White" Height="19.586" Canvas.Top="20" FontSize="18"><Run Background="Black" Text=" "/><Run Background="Black" Text="SAÍDA ARQUIVO FINAL (Geracao.txt)"/><Run Background="Black" Text=" "/></TextBlock>
+            <TextBlock x:Name="textTempoExec" TextWrapping="Wrap" Background="#FF040404" FontFamily="Stencil" Width="100" Canvas.Left="16" TextAlignment="Center" Foreground="White" Canvas.Top="87.293"><Run Text="Tempo de "/><LineBreak/><Run Text="Execução"/><LineBreak/><Run Text="(h"/><Run Text="h"/><Run Text=":mm:ss:ms)"/></TextBlock>
+            <TextBlock x:Name="tempoExec" TextWrapping="Wrap" Background="#FF040404" FontFamily="Stencil" Width="100" Canvas.Left="16" TextAlignment="Center" Foreground="White" Canvas.Top="140.733"/>
+
+            <TextBox x:Name="folha_Geracao" Height="240" Canvas.Left="121" TextWrapping="NoWrap" Canvas.Top="58" Width="309" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
+
+            <!--Botão-->
+            <UserControl x:Name="back" Height="45" Width="70" Foreground="{x:Null}" Canvas.Left="435" Canvas.Top="10">
+                <UserControl.Background>
+                    <ImageBrush ImageSource="back.png" Stretch="Uniform"/>
+                </UserControl.Background>
+                <Label x:Name="button_voltar" Content="" Margin="0,0,23.535,0" MouseDoubleClick="button_voltar_MouseDoubleClick" HorizontalAlignment="Right" Width="23.333">
+                    <Label.Background>
+                        <ImageBrush/>
+                    </Label.Background>
+                </Label>
+            </UserControl>
+
+        </Canvas>
+    </Canvas>
+</Window>
+
